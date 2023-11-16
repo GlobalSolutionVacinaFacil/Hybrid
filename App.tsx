@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from "expo-font";
+import "react-native-gesture-handler";
+import { Navigation } from "./routes/navigation";
+import { AuthContextProvider } from "./contexts/auth-context";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    PoppinsMedium: require("./assets/fonts/Poppins-Medium.ttf"),
+    PoppinsLight: require("./assets/fonts/Poppins-Light.ttf"),
+  });
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AuthContextProvider>
+      <Navigation />
+    </AuthContextProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
