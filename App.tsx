@@ -1,3 +1,12 @@
+/*
+
+RM 93038	Breno Massa Martins
+RM 94280	Gustavo Henrique Moura 
+RM 95224	Leonard Karic Klovrza
+RM 94898	Luan Santos dos Reis
+
+*/
+
 import { useFonts } from "expo-font";
 import "react-native-gesture-handler";
 import { Navigation } from "./routes/navigation";
