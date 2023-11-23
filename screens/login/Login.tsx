@@ -61,6 +61,7 @@ export const Login = ({ navigation }: Props): JSX.Element => {
           value={password}
           onChangeText={(text) => setPassword(text)}
           placeholder="senha"
+          secureTextEntry={true}
         />
         <Pressable
           style={styles().registerPressable}
